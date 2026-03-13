@@ -11,7 +11,7 @@ I am **Juntao (Jason) Chen**, an MPhil student in the Department of Mathematics 
 
 My research sits at the intersection of **probabilistic machine learning**, **computational statistics**, and **deep learning** — with a focus on developing principled, uncertainty-aware methods for real-world problems.
 
-Prior to Newcastle, I completed my B.Sc. in Mathematics and Applied Mathematics at [Chongqing University of Arts and Sciences](https://www.cqwu.edu.cn/), with a collaborative study experience at the [University of North Carolina Wilmington](https://www.uncw.edu/).
+Prior to Newcastle, I completed my B.Sc. in Mathematics and Applied Mathematics at Chongqing University of Arts and Sciences, with a collaborative study experience at the University of North Carolina Wilmington.
 
 ---
 

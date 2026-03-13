@@ -19,7 +19,7 @@ Education
 * **MPhil in Mathematics**, Newcastle University, UK
   * Supervisor: Prof. Chris Oates
   * Research: Probabilistic Machine Learning & Computational Statistics
-  * 2024 – Present
+  * 2025 – Present
 
 * **B.Sc. in Mathematics and Applied Mathematics**, Chongqing University of Arts and Sciences, China
   * Collaborative study at University of North Carolina Wilmington (UNCW), USA
