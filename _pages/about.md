@@ -39,3 +39,11 @@ Prior to Newcastle, I completed my B.Sc. in Mathematics and Applied Mathematics 
 | 2022 & 2023 | National College Student Statistical Modeling Competition — **Second Prize** |
 | 2021–2023 | University-level **Special Scholarship** (3 consecutive years) |
 | 2021–2023 | Department **First-Class Scholarship** (3 consecutive years) |
+
+---
+
+## Visitor Map
+
+<div style="text-align: center; margin-top: 1rem;">
+  <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=JaAvWtEeczc9P-6tKzPgSbuvHFP5j7m3PltnLpLiPT8"></script>
+</div>
