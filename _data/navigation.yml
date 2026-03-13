@@ -2,5 +2,14 @@ main:
   - title: "Publications"
     url: /publications/
 
+  - title: "Research"
+    url: /research/
+
+  - title: "Gallery"
+    url: /gallery/
+
   - title: "CV"
     url: /cv/
+
+  - title: "Guide"
+    url: /markdown/
