@@ -369,7 +369,4 @@ author_profile: true
 </div>
 </div>
 
-<p class="credit-line">
-  Photo source for Chongqing card: Wikimedia Commons (CC BY-SA 4.0, Maple Doctor)
-</p>
 </div>

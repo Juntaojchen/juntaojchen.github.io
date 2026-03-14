@@ -30,11 +30,24 @@ author_profile: true
 	box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
 }
 
+.trip-hero-link,
+.mini-gallery a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+
 .trip-hero img {
 	display: block;
 	width: 100%;
 	max-height: 480px;
 	object-fit: cover;
+	transition: transform 0.2s ease;
+}
+
+.trip-hero-link:hover img,
+.mini-gallery a:hover img {
+	transform: scale(1.02);
 }
 
 .trip-hero-note {
@@ -47,6 +60,19 @@ author_profile: true
 	border-radius: 8px;
 	padding: 0.42rem 0.56rem;
 	font-size: 0.82rem;
+	backdrop-filter: blur(2px);
+}
+
+.trip-zoom-note {
+	position: absolute;
+	right: 0.75rem;
+	bottom: 0.75rem;
+	color: #f9fbfd;
+	background: rgba(15, 23, 42, 0.62);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 8px;
+	padding: 0.42rem 0.56rem;
+	font-size: 0.78rem;
 	backdrop-filter: blur(2px);
 }
 
@@ -218,8 +244,11 @@ author_profile: true
 
 <div class="trip-page">
 	<div class="trip-hero">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1920px-Chongqing_Skyline_At_Night.png" alt="Chongqing skyline at night">
+		<a class="trip-hero-link" href="https://upload.wikimedia.org/wikipedia/commons/f/f5/Chongqing_Skyline_At_Night.png" target="_blank" rel="noopener noreferrer">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1920px-Chongqing_Skyline_At_Night.png" alt="Chongqing skyline at night">
+		</a>
 		<div class="trip-hero-note">Chongqing, China | Night walk by the river</div>
+		<div class="trip-zoom-note">Click image to enlarge</div>
 	</div>
 
 	<div class="trip-headline">
@@ -284,15 +313,21 @@ author_profile: true
 	<h2 class="mini-gallery-title">More Photos</h2>
 	<div class="mini-gallery">
 		<figure>
-			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1280px-Chongqing_Skyline_At_Night.png" alt="Chongqing skyline at night">
+			<a href="https://upload.wikimedia.org/wikipedia/commons/f/f5/Chongqing_Skyline_At_Night.png" target="_blank" rel="noopener noreferrer">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1280px-Chongqing_Skyline_At_Night.png" alt="Chongqing skyline at night">
+			</a>
 			<figcaption>Main skyline view</figcaption>
 		</figure>
 		<figure>
-			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Chongqing_center.jpg/1280px-Chongqing_center.jpg" alt="Chongqing center skyline">
+			<a href="https://upload.wikimedia.org/wikipedia/commons/d/d4/Chongqing_center.jpg" target="_blank" rel="noopener noreferrer">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Chongqing_center.jpg/1280px-Chongqing_center.jpg" alt="Chongqing center skyline">
+			</a>
 			<figcaption>City center panorama</figcaption>
 		</figure>
 		<figure>
-			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Raffles_City_Chongqing_from_Yangtze_River.jpg/1280px-Raffles_City_Chongqing_from_Yangtze_River.jpg" alt="Raffles City Chongqing from Yangtze River">
+			<a href="https://upload.wikimedia.org/wikipedia/commons/b/b2/Raffles_City_Chongqing_from_Yangtze_River.jpg" target="_blank" rel="noopener noreferrer">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Raffles_City_Chongqing_from_Yangtze_River.jpg/1280px-Raffles_City_Chongqing_from_Yangtze_River.jpg" alt="Raffles City Chongqing from Yangtze River">
+			</a>
 			<figcaption>Riverside architecture and movement</figcaption>
 		</figure>
 	</div>
