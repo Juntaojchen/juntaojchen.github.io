@@ -46,6 +46,17 @@ author_profile: true
   padding: 6px 8px;
   background: #f8f8f8;
 }
+.photo-caption .caption-title {
+  font-weight: 600;
+  color: #2b2f33;
+  letter-spacing: 0.02em;
+}
+.photo-caption .caption-meta {
+  font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  color: #7a8288;
+  margin-top: 2px;
+}
 </style>
 
 Life beyond research — moments from travels and explorations.
@@ -70,12 +81,13 @@ Life beyond research — moments from travels and explorations.
 <h2>🇨🇳 China</h2>
 <div class="photo-grid">
 
-<!-- 示例（取消注释后使用）：
-<a href="/images/gallery/chongqing.jpg">
-  <img src="/images/gallery/chongqing.jpg" alt="Chongqing">
-  <div class="photo-caption">Chongqing, China</div>
+<a href="https://commons.wikimedia.org/wiki/File:Chongqing_Skyline_At_Night.png" target="_blank" rel="noopener noreferrer">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1280px-Chongqing_Skyline_At_Night.png" alt="Chongqing skyline at night">
+  <div class="photo-caption">
+    <div class="caption-title">Chongqing, China</div>
+    <div class="caption-meta">29.5630° N, 106.5516° E</div>
+  </div>
 </a>
--->
 
 </div>
 </div>
@@ -88,5 +100,5 @@ Life beyond research — moments from travels and explorations.
 </div>
 
 <p style="color:#999; font-size:0.85rem; margin-top:2rem; text-align:center;">
-  📷 Photos taken by Juntao Chen
+  📷 Chongqing photo source: Wikimedia Commons (CC BY-SA 4.0, Maple Doctor)
 </p>
