@@ -6,86 +6,143 @@ author_profile: true
 ---
 
 <style>
+.travel-wrap {
+  --ink: #1f2a36;
+  --muted: #6b7785;
+  --line: #dbe4eb;
+  --accent: #0e7490;
+  --card: #ffffff;
+  background: linear-gradient(180deg, #f5f8fb 0%, #ffffff 55%);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.4rem;
+  margin: 0.5rem 0 1.6rem;
+}
+
+.travel-intro {
+  color: var(--muted);
+  margin: 0.35rem 0 0;
+  font-size: 1rem;
+}
+
 .gallery-section {
-  margin-bottom: 2.5rem;
+  margin-top: 1.8rem;
 }
-.gallery-section h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #494e52;
-  border-bottom: 2px solid #0092ca;
-  padding-bottom: 0.4rem;
-  margin-bottom: 1rem;
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.18rem;
+  color: var(--ink);
+  margin: 0 0 0.8rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid var(--accent);
 }
+
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+  gap: 14px;
 }
-.photo-grid a {
-  display: block;
+
+.story-card {
+  text-decoration: none;
+  color: inherit;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
   overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
-.photo-grid a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+
+.story-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
 }
-.photo-grid img {
+
+.story-card img {
   width: 100%;
-  height: 200px;
+  height: 210px;
   object-fit: cover;
   display: block;
 }
-.photo-caption {
-  font-size: 0.82rem;
-  color: #666;
-  text-align: center;
-  padding: 6px 8px;
-  background: #f8f8f8;
+
+.story-body {
+  padding: 0.72rem 0.8rem 0.86rem;
 }
-.photo-caption .caption-title {
-  font-weight: 600;
-  color: #2b2f33;
-  letter-spacing: 0.02em;
+
+.story-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
 }
-.photo-caption .caption-meta {
+
+.story-meta {
+  margin-top: 0.28rem;
   font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
-  font-size: 0.75rem;
-  color: #7a8288;
-  margin-top: 2px;
+  font-size: 0.76rem;
+  color: #5b6775;
+}
+
+.story-note {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.empty-box {
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  padding: 0.9rem;
+  color: #8a95a2;
+  font-size: 0.9rem;
+  background: #fcfdff;
+}
+
+.credit-line {
+  color: #8391a0;
+  font-size: 0.84rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .travel-wrap {
+    padding: 1rem;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 
-Life beyond research — moments from travels and explorations.
+<div class="travel-wrap">
+<p class="travel-intro">Life beyond research - moments from travels, city walks, and personal reflections.</p>
 
 ---
 
 <div class="gallery-section">
-<h2>🇬🇧 United Kingdom</h2>
+<h2 class="section-title">GB United Kingdom</h2>
 <div class="photo-grid">
-
-<!-- 把照片放到 images/gallery/ 目录后，按下面格式添加：
-<a href="/images/gallery/your-photo.jpg">
-  <img src="/images/gallery/your-photo.jpg" alt="描述">
-  <div class="photo-caption">地点或描述</div>
-</a>
--->
+<div class="empty-box">No story yet. Add your UK travel story card here.</div>
 
 </div>
 </div>
 
 <div class="gallery-section">
-<h2>🇨🇳 China</h2>
+<h2 class="section-title">CN China</h2>
 <div class="photo-grid">
 
-<a href="/travel/chongqing-night/">
+<a class="story-card" href="/travel/chongqing-night/">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1280px-Chongqing_Skyline_At_Night.png" alt="Chongqing skyline at night">
-  <div class="photo-caption">
-    <div class="caption-title">Chongqing, China</div>
-    <div class="caption-meta">29.5630° N, 106.5516° E | Click to read</div>
+  <div class="story-body">
+    <p class="story-title">Chongqing, China</p>
+    <div class="story-meta">29.5630 N, 106.5516 E</div>
+    <div class="story-note">Night skyline diary, river walk, and personal reflections.</div>
   </div>
 </a>
 
@@ -93,12 +150,14 @@ Life beyond research — moments from travels and explorations.
 </div>
 
 <div class="gallery-section">
-<h2>🌍 Elsewhere</h2>
+<h2 class="section-title">Elsewhere</h2>
 <div class="photo-grid">
+<div class="empty-box">More destinations coming soon.</div>
 
 </div>
 </div>
 
-<p style="color:#999; font-size:0.85rem; margin-top:2rem; text-align:center;">
-  📷 Chongqing photo source: Wikimedia Commons (CC BY-SA 4.0, Maple Doctor). Click each photo to view story and reflections.
+<p class="credit-line">
+  Photo source for Chongqing card: Wikimedia Commons (CC BY-SA 4.0, Maple Doctor)
 </p>
+</div>
