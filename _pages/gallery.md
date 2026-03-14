@@ -81,11 +81,11 @@ Life beyond research — moments from travels and explorations.
 <h2>🇨🇳 China</h2>
 <div class="photo-grid">
 
-<a href="https://commons.wikimedia.org/wiki/File:Chongqing_Skyline_At_Night.png" target="_blank" rel="noopener noreferrer">
+<a href="/travel/chongqing-night/">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1280px-Chongqing_Skyline_At_Night.png" alt="Chongqing skyline at night">
   <div class="photo-caption">
     <div class="caption-title">Chongqing, China</div>
-    <div class="caption-meta">29.5630° N, 106.5516° E</div>
+    <div class="caption-meta">29.5630° N, 106.5516° E | Click to read</div>
   </div>
 </a>
 
@@ -100,5 +100,5 @@ Life beyond research — moments from travels and explorations.
 </div>
 
 <p style="color:#999; font-size:0.85rem; margin-top:2rem; text-align:center;">
-  📷 Chongqing photo source: Wikimedia Commons (CC BY-SA 4.0, Maple Doctor)
+  📷 Chongqing photo source: Wikimedia Commons (CC BY-SA 4.0, Maple Doctor). Click each photo to view story and reflections.
 </p>
