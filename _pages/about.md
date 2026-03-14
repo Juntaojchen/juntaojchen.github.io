@@ -6,12 +6,11 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
-I am **Juntao (Jason) Chen**, an MPhil student in the Department of Mathematics and Statistics at [Newcastle University](https://www.ncl.ac.uk/), supervised by [Prof. Chris Oates](https://www.ncl.ac.uk/maths-physics/people/profile/chrisoates.html).
+I am **Juntao (Jason) Chen**, an MPhil candidate in the School of Mathematics, Statistics and Physics at Newcastle University, and I am fortunate to be supervised by [Prof. Chris Oates](https://www.ncl.ac.uk/maths-physics/people/profile/chrisoates.html).
 
 My research sits at the intersection of **probabilistic machine learning**, **computational statistics**, and **deep learning** — with a focus on developing principled, uncertainty-aware methods for real-world problems.
 
-Prior to Newcastle, I completed my B.Sc. in Mathematics and Applied Mathematics at Chongqing University of Arts and Sciences, with a collaborative study experience at the University of North Carolina Wilmington.
+<!-- Prior to Newcastle, I completed my B.Sc. in Mathematics and Applied Mathematics at Chongqing University of Arts and Sciences, with a collaborative study experience at the University of North Carolina Wilmington. -->
 
 ---
 
