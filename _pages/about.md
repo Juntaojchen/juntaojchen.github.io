@@ -41,6 +41,63 @@ My research sits at the intersection of **probabilistic machine learning**, **co
 
 ## Visitor Map
 
-<div style="text-align: center; margin-top: 1rem;">
-  <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=JaAvWtEeczc9P-6tKzPgSbuvHFP5j7m3PltnLpLiPT8"></script>
+<style>
+.visitor-map-wrap {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.visitor-map-fallback {
+  display: none;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 0.9rem 1rem;
+  border: 1px solid #d8e2ea;
+  border-radius: 12px;
+  background: #f8fbfd;
+  color: #5f6b78;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+</style>
+
+<div class="visitor-map-wrap">
+  <div id="visitor-map-container"></div>
+  <div id="visitor-map-fallback" class="visitor-map-fallback">
+    The visitor globe sometimes fails to load because the external script can be blocked by network conditions, privacy extensions, or browser protections. If it does not appear, please try refreshing the page.
+  </div>
 </div>
+
+<script>
+  (function () {
+    var container = document.getElementById('visitor-map-container');
+    var fallback = document.getElementById('visitor-map-fallback');
+    if (!container || !fallback) return;
+
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.id = 'mmvst_globe';
+    script.src = 'https://mapmyvisitors.com/globe.js?d=JaAvWtEeczc9P-6tKzPgSbuvHFP5j7m3PltnLpLiPT8';
+    script.async = true;
+
+    var resolved = false;
+
+    script.onload = function () {
+      resolved = true;
+      fallback.style.display = 'none';
+    };
+
+    script.onerror = function () {
+      resolved = true;
+      fallback.style.display = 'block';
+    };
+
+    container.appendChild(script);
+
+    window.setTimeout(function () {
+      if (!resolved && container.children.length <= 1) {
+        fallback.style.display = 'block';
+      }
+    }, 4000);
+  })();
+</script>
