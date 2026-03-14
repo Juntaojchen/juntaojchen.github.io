@@ -37,6 +37,16 @@ author_profile: true
 	color: inherit;
 }
 
+.lightbox-trigger {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background: transparent;
+	width: 100%;
+	cursor: zoom-in;
+	text-align: left;
+}
+
 .trip-hero img {
 	display: block;
 	width: 100%;
@@ -47,6 +57,10 @@ author_profile: true
 
 .trip-hero-link:hover img,
 .mini-gallery a:hover img {
+	transform: scale(1.02);
+}
+
+.lightbox-trigger:hover img {
 	transform: scale(1.02);
 }
 
@@ -213,6 +227,69 @@ author_profile: true
 	font-size: 0.9rem;
 }
 
+.lightbox {
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	background: rgba(15, 23, 42, 0.82);
+	backdrop-filter: blur(6px);
+}
+
+.lightbox.is-open {
+	display: flex;
+}
+
+.lightbox-backdrop {
+	position: absolute;
+	inset: 0;
+	border: 0;
+	background: transparent;
+	cursor: zoom-out;
+}
+
+.lightbox-panel {
+	position: relative;
+	z-index: 1;
+	max-width: min(1100px, 92vw);
+	max-height: 88vh;
+	width: auto;
+}
+
+.lightbox-image {
+	display: block;
+	max-width: 100%;
+	max-height: 78vh;
+	border-radius: 14px;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+	background: #fff;
+}
+
+.lightbox-close {
+	position: absolute;
+	top: -0.8rem;
+	right: -0.8rem;
+	width: 40px;
+	height: 40px;
+	border: 0;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.96);
+	color: #0f172a;
+	font-size: 1.2rem;
+	cursor: pointer;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.lightbox-caption {
+	margin-top: 0.75rem;
+	text-align: center;
+	color: #e2e8f0;
+	font-size: 0.92rem;
+}
+
 .journal {
 	margin-top: 1rem;
 	border-left: 3px solid var(--accent);
@@ -239,14 +316,23 @@ author_profile: true
 	.mini-gallery {
 		grid-template-columns: 1fr;
 	}
+
+	.lightbox {
+		padding: 1rem;
+	}
+
+	.lightbox-close {
+		top: -0.5rem;
+		right: -0.2rem;
+	}
 }
 </style>
 
 <div class="trip-page">
 	<div class="trip-hero">
-		<a class="trip-hero-link" href="https://upload.wikimedia.org/wikipedia/commons/f/f5/Chongqing_Skyline_At_Night.png" target="_blank" rel="noopener noreferrer">
+		<button class="trip-hero-link lightbox-trigger" type="button" data-full="https://upload.wikimedia.org/wikipedia/commons/f/f5/Chongqing_Skyline_At_Night.png" data-caption="Chongqing skyline at night">
 			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1920px-Chongqing_Skyline_At_Night.png" alt="Chongqing skyline at night">
-		</a>
+		</button>
 		<div class="trip-hero-note">Chongqing, China | Night walk by the river</div>
 		<div class="trip-zoom-note">Click image to enlarge</div>
 	</div>
@@ -313,23 +399,76 @@ author_profile: true
 	<h2 class="mini-gallery-title">More Photos</h2>
 	<div class="mini-gallery">
 		<figure>
-			<a href="https://upload.wikimedia.org/wikipedia/commons/f/f5/Chongqing_Skyline_At_Night.png" target="_blank" rel="noopener noreferrer">
+			<button class="lightbox-trigger" type="button" data-full="https://upload.wikimedia.org/wikipedia/commons/f/f5/Chongqing_Skyline_At_Night.png" data-caption="Main skyline view">
 				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Chongqing_Skyline_At_Night.png/1280px-Chongqing_Skyline_At_Night.png" alt="Chongqing skyline at night">
-			</a>
+			</button>
 			<figcaption>Main skyline view</figcaption>
 		</figure>
 		<figure>
-			<a href="https://upload.wikimedia.org/wikipedia/commons/d/d4/Chongqing_center.jpg" target="_blank" rel="noopener noreferrer">
+			<button class="lightbox-trigger" type="button" data-full="https://upload.wikimedia.org/wikipedia/commons/d/d4/Chongqing_center.jpg" data-caption="City center panorama">
 				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Chongqing_center.jpg/1280px-Chongqing_center.jpg" alt="Chongqing center skyline">
-			</a>
+			</button>
 			<figcaption>City center panorama</figcaption>
 		</figure>
 		<figure>
-			<a href="https://upload.wikimedia.org/wikipedia/commons/b/b2/Raffles_City_Chongqing_from_Yangtze_River.jpg" target="_blank" rel="noopener noreferrer">
+			<button class="lightbox-trigger" type="button" data-full="https://upload.wikimedia.org/wikipedia/commons/b/b2/Raffles_City_Chongqing_from_Yangtze_River.jpg" data-caption="Riverside architecture and movement">
 				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Raffles_City_Chongqing_from_Yangtze_River.jpg/1280px-Raffles_City_Chongqing_from_Yangtze_River.jpg" alt="Raffles City Chongqing from Yangtze River">
-			</a>
+			</button>
 			<figcaption>Riverside architecture and movement</figcaption>
 		</figure>
 	</div>
 
 </div>
+
+<div class="lightbox" id="travel-lightbox" aria-hidden="true">
+	<button class="lightbox-backdrop" type="button" aria-label="Close enlarged image"></button>
+	<div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Enlarged travel photo">
+		<button class="lightbox-close" type="button" aria-label="Close enlarged image">×</button>
+		<img class="lightbox-image" src="" alt="">
+		<div class="lightbox-caption"></div>
+	</div>
+</div>
+
+<script>
+	(function () {
+		var lightbox = document.getElementById('travel-lightbox');
+		if (!lightbox) return;
+
+		var image = lightbox.querySelector('.lightbox-image');
+		var caption = lightbox.querySelector('.lightbox-caption');
+		var closeButton = lightbox.querySelector('.lightbox-close');
+		var backdrop = lightbox.querySelector('.lightbox-backdrop');
+		var triggers = document.querySelectorAll('.lightbox-trigger');
+
+		function openLightbox(src, alt, text) {
+			image.src = src;
+			image.alt = alt || text || 'Travel photo';
+			caption.textContent = text || '';
+			lightbox.classList.add('is-open');
+			lightbox.setAttribute('aria-hidden', 'false');
+			document.body.style.overflow = 'hidden';
+		}
+
+		function closeLightbox() {
+			lightbox.classList.remove('is-open');
+			lightbox.setAttribute('aria-hidden', 'true');
+			image.src = '';
+			document.body.style.overflow = '';
+		}
+
+		triggers.forEach(function (trigger) {
+			trigger.addEventListener('click', function () {
+				var img = trigger.querySelector('img');
+				openLightbox(trigger.getAttribute('data-full'), img ? img.alt : '', trigger.getAttribute('data-caption'));
+			});
+		});
+
+		closeButton.addEventListener('click', closeLightbox);
+		backdrop.addEventListener('click', closeLightbox);
+		document.addEventListener('keydown', function (event) {
+			if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+				closeLightbox();
+			}
+		});
+	})();
+</script>
