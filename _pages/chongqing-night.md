@@ -332,8 +332,4 @@ author_profile: true
 		</figure>
 	</div>
 
-	<div class="credit">
-		Photo sources: Wikimedia Commons. Main image by Maple Doctor (CC BY-SA 4.0).
-		Additional images include works by Oliver Ren and Junyi Lou (CC BY-SA).
-	</div>
 </div>
